@@ -1,0 +1,26 @@
+{
+  "name": "switch",
+  "repo": "yuehu/switch",
+  "description": "A switch UI for checkbox.",
+  "version": "0.1.0",
+  "keywords": [
+    "ui",
+    "toggle",
+    "switch",
+    "checkbox"
+  ],
+  "dependencies": {
+    "component/classes": "*",
+    "component/emitter": "*",
+    "component/event": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "switch.css"
+  ]
+}

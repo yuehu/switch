@@ -1,0 +1,47 @@
+
+.switch {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+.switch-on-label,
+.switch-off-label {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  margin: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+
+  height: 2em;
+  width: 3em;
+  font: 300 1em/2em sans-serif;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+.switch-on-label {
+  color: #FFFFFF;
+}
+.switch-off-label {
+  color: #B9BAB3;
+}
+
+.switch.on {
+  background: #70A667;
+}
+.switch.on .switch-off-label {
+  background: white;
+  color: rgba(0, 0, 0, 0);
+  width: 2em;
+}
+
+.switch.off {
+  background: #ECE6DA;
+}
+.switch.off .switch-on-label {
+  background: white;
+  color: rgba(0, 0, 0, 0);
+  width: 2em;
+}

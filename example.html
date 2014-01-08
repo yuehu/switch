@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Switch UI</title>
+  <link rel="stylesheet" href="switch.css">
+  <script src="build/build.js"></script>
+</head>
+<body>
+  <form action="">
+    <input id="toggle" type="checkbox" name="q">
+  </form>
+  <script>
+    var Switch = require('switch');
+    var s = new Switch();
+    s.takeover(document.getElementById('toggle'));
+  </script>
+</body>
+</html>
