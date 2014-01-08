@@ -17,6 +17,7 @@
   -webkit-transition: background .2s ease-in;
   -moz-transition: background .2s ease-in;
   transition: background .2s ease-in;
+  cursor: pointer;
 }
 .switch-on-label,
 .switch-off-label {
@@ -29,6 +30,7 @@
   transition: transform .2s ease-in;
   -webkit-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 .switch-on-label {
   right: 3em;
@@ -73,6 +75,6 @@
 }
 
 .switch.off {
-  color: #B4A995;
-  background: #ECE6DA;
+  color: #A0A0A0;
+  background: #DADADA;
 }
