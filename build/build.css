@@ -14,9 +14,9 @@
   height: 3em;
   width: 7.6em;
   border-radius: 3em;
-  -webkit-transition: background .2s ease-in;
-  -moz-transition: background .2s ease-in;
-  transition: background .2s ease-in;
+  -webkit-transition: background .2s ease-in, color .2s ease-in;
+  -moz-transition: background .2s ease-in, color .2s ease-in;
+  transition: background .2s ease-in, color .2s ease-in;
   cursor: pointer;
 }
 .switch-on-label,
@@ -75,6 +75,6 @@
 }
 
 .switch.off {
-  color: #A0A0A0;
-  background: #DADADA;
+  color: #bbb;
+  background: #eaeaea;
 }
