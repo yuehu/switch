@@ -1,8 +1,20 @@
+/**
+ * Switch
+ *
+ * A switch UI for checkbox.
+ *
+ * Copyright (c) 2014 by Hsiaoming Yang.
+ */
 
 var classes = require('classes');
 var events = require('event');
 var emitter = require('emitter');
 
+/**
+ * Switch Object
+ *
+ * @param {Boolean} value
+ */
 function Switch(value) {
   var me = this;
   me._value = value || false;
@@ -15,13 +27,19 @@ function Switch(value) {
   labelOff.className = 'switch-off-label';
   me._labelOff = labelOff;
 
+  var mask = document.createElement('div');
+  mask.className = 'switch-mask';
+  me._mask = mask;
+
   var element = document.createElement('div');
   element.className = 'switch';
   element._class = classes(element);
   me.element = element;
 
   element.appendChild(labelOn);
+  element.appendChild(mask);
   element.appendChild(labelOff);
+
   events.bind(element, 'click', function() {
     me.toggle();
   });
@@ -57,7 +75,22 @@ Switch.prototype.toggle = function() {
   }
 };
 
+/**
+ * Getter and setter for Switch.
+ */
+Switch.prototype.value = function(val) {
+  if (val === undefined) {
+    return this._value;
+  } else {
+    this.change(value);
+  }
+};
+
 Switch.prototype.takeover = function(input) {
+  if (input.checked) {
+    this.change(true);
+  }
+
   // render element to the dom
   input.parentNode.insertBefore(this.element, input);
 
