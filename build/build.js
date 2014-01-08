@@ -602,20 +602,16 @@ function Switch(value) {
   var me = this;
   me._value = value || false;
 
-  var labelOn = document.createElement('label');
-  labelOn.className = 'switch-on-label';
+  var labelOn = createElement('label', 'switch-on-label');
   me._labelOn = labelOn;
 
-  var labelOff = document.createElement('label');
-  labelOff.className = 'switch-off-label';
+  var labelOff = createElement('label', 'switch-off-label');
   me._labelOff = labelOff;
 
-  var mask = document.createElement('div');
-  mask.className = 'switch-mask';
+  var mask = createElement('div', 'switch-mask');
   me._mask = mask;
 
-  var element = document.createElement('div');
-  element.className = 'switch';
+  var element = createElement('div', 'switch');
   element._class = classes(element);
   me.element = element;
 
@@ -688,6 +684,12 @@ Switch.prototype.takeover = function(input) {
     input.checked = value;
   });
 };
+
+function createElement(tagName, className) {
+  var node = document.createElement(tagName);
+  node.className = className;
+  return node;
+}
 
 module.exports = Switch;
 
