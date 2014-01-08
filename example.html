@@ -3,13 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Switch UI</title>
-  <link rel="stylesheet" href="switch.css">
+  <link rel="stylesheet" href="build/build.css">
   <script src="build/build.js"></script>
+  <style>
+    body {
+      color: #666;
+      font: 500 16px/1.6 "Helvetica Neue", Helvetica, sans-serif;
+    }
+    a {
+      color: #444;
+    }
+    .container {
+      max-width: 650px;
+      padding: 30px 20px;
+      margin: 60px auto;
+    }
+    form {
+      margin: 20px 0 80px;
+    }
+  </style>
 </head>
 <body>
-  <form action="">
-    <input id="toggle" type="checkbox" name="q">
-  </form>
+  <div class="container">
+    <h1>Switch</h1>
+    <form action="">
+      <input id="toggle" type="checkbox" name="q">
+    </form>
+    <p><a href="https://github.com/yuehu/switch">Fork me on GitHub</a></p>
+    <p>A component by <a href="http://lepture.com/">Hsiaoming Yang</a></p>
+  </div>
   <script>
     var Switch = require('switch');
     var s = new Switch();
