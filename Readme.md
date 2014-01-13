@@ -2,7 +2,7 @@
 
 A switch UI for checkbox.
 
-![switch](https://f.cloud.github.com/assets/290496/1894252/5129c218-7adc-11e3-9ff2-8dfa65a7ebbc.png)
+[![switch](https://f.cloud.github.com/assets/290496/1894252/5129c218-7adc-11e3-9ff2-8dfa65a7ebbc.png)](http://yuehu.github.io/switch/)
 
 
 ## Installation
@@ -50,6 +50,16 @@ When switcher value changes, it will emit a `change` event.
 swither.on('change', function(value) {
   // value is true or false
 })
+```
+
+## Additional Note
+
+You can change the button size by changing the font size of the label.
+
+```css
+.switch {
+  font-size: 14px;
+}
 ```
 
 ## License
