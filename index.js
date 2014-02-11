@@ -28,15 +28,15 @@ function Switch(value) {
   var mask = createElement('div', 'switch-mask');
   me._mask = mask;
 
-  var element = createElement('div', 'switch');
-  element._class = classes(element);
-  me.element = element;
+  var el = createElement('div', 'switch');
+  el._class = classes(el);
+  me.el = el;
 
-  element.appendChild(labelOn);
-  element.appendChild(mask);
-  element.appendChild(labelOff);
+  el.appendChild(labelOn);
+  el.appendChild(mask);
+  el.appendChild(labelOff);
 
-  events.bind(element, 'click', function() {
+  events.bind(el, 'click', function() {
     me.toggle();
   });
 
@@ -54,11 +54,11 @@ Switch.prototype.change = function(value) {
   value = value ? true: false;
   this._value = value;
   if (value) {
-    this.element._class.add('on');
-    this.element._class.remove('off');
+    this.el._class.add('on');
+    this.el._class.remove('off');
   } else {
-    this.element._class.add('off');
-    this.element._class.remove('on');
+    this.el._class.add('off');
+    this.el._class.remove('on');
   }
   this.emit('change', value);
 };
@@ -88,7 +88,7 @@ Switch.prototype.takeover = function(input) {
   }
 
   // render element to the dom
-  input.parentNode.insertBefore(this.element, input);
+  input.parentNode.insertBefore(this.el, input);
 
   // hide original input
   input.style.display = 'none';
