@@ -40,14 +40,14 @@ function Switch(value) {
     me.toggle();
   });
 
-  me.label();
+  me.label('ON', 'OFF');
   me.change(me._value);
 }
 emitter(Switch.prototype);
 
 Switch.prototype.label = function(on, off) {
-  this._labelOn.innerHTML = on || 'ON';
-  this._labelOff.innerHTML = off || 'OFF';
+  if (on) this._labelOn.innerHTML = on;
+  if (off) this._labelOff.innerHTML = off;
 };
 
 Switch.prototype.change = function(value) {
