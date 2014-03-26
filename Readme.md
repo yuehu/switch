@@ -4,6 +4,7 @@ A switch UI for checkbox.
 
 [![switch](https://f.cloud.github.com/assets/290496/1894252/5129c218-7adc-11e3-9ff2-8dfa65a7ebbc.png)](http://yuehu.github.io/switch/)
 
+Showcase at <http://yuehu.github.io/switch/>.
 
 ## Installation
 
