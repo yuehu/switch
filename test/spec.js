@@ -31,6 +31,10 @@ describe('Switch', function() {
     var sw = new Switch();
     var input = document.getElementById('demo');
     assert(sw._value, false);
+
+    sw.label('開');
+    assert(sw._labelOn.innerHTML, '開');
+
     sw.takeover(input);
     assert(sw._value, true);
     assert(sw._labelOn.innerHTML, 'Open');
