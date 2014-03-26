@@ -14,7 +14,9 @@
     "component/emitter": "*",
     "component/event": "*"
   },
-  "development": {},
+  "development": {
+    "visionmedia/mocha": "*"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": [

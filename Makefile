@@ -17,4 +17,7 @@ gh-pages: components
 	@ghp-import gh-pages -n
 	@rm -fr gh-pages
 
-.PHONY: clean
+test: build
+	@mocha-browser test/index.html
+
+.PHONY: clean test build
