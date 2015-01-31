@@ -15,7 +15,7 @@
     "component/event": "*"
   },
   "development": {
-    "visionmedia/mocha": "*"
+    "mochajs/mocha": "*"
   },
   "license": "MIT",
   "main": "index.js",
